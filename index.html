@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Chroma Garage</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark header-bg fixed-top">
+                <a class="navbar-brand" href="#">
+                    <image src="assets/img/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+                    Chroma Garage
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                    <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="halamanhero">
+            <div class="container">
+                <div class="texthero">
+                    <div class="col-md-6 text-left bmargin text-white">
+                        <h3 class=" roboto-slab uppercase less-mar3">More about Chroma Garage</h3>
+                    <div class="title-line-9 less-margin align-center"></div>                       
+                        <p>We are the single destination for your vehicle's total care. We blend advanced mechanical expertise with masterful detailing, ensuring your car performs perfectly and looks flawless. From essential repairs and maintenance to restoring your paint's original chroma and brilliance, we bring true quality to every service. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="halamanservis bg-light text-center">
+           <div>
+                <image src="assets/img/mechanic.png" alt="car-repair" width="100">
+                <h2 class="section-heading mb-4">Services</h2>
+                <p class="lead mb-0">At Chroma Garage, we offer a comprehensive range of services to keep your vehicle in top condition, both mechanically and aesthetically.</p>
+           </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <image src="assets/img/car-repair.png" alt="car-repair" width="100">
+                            <h3>Car Repair</h3>
+                            <p class="lead mb-0">Expert diagnosis and repair for all vehicle needs, ensuring reliable and safe performance.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <image src="assets/img/car-wash.png" alt="car-wash" width="100">
+                            <h3>Car Wash</h3>
+                            <p class="lead mb-0">Professional car wash services to clean, protect, and restore your vehicle's shine and finish.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <image src="assets/img/car-polish.png" alt="car-polish" width="100">
+                            <h3>Car Polish</h3>
+                            <p class="lead mb-0">Safely remove scratches and swirl marks, restoring deep color clarity and a brilliant, mirror-like finish.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="halamanabout text-center bg-light">
+            <div class="abouttitle">
+                <image src="assets/img/information.png" alt="car-repair" width="100">
+                <h2 class="section-heading mb-4">About</h2>
+                <p class="lead mb-0">Below, you'll find the performance metrics and quality scorecards that prove our commitment to exceptional service.</p>
+            </div>
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-1">
+                        <h2>Performance</h2>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 showcase-text">
+                        <h2>Total Vehicle Care</h2>
+                        <p class="lead mb-0">We blend certified mechanical expertise for reliable performance with professional detailing to make your car shine.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="halamancontact text-center bg-light">
+            <div class="abouttitle">
+                <image src="assets/img/contact.png" alt="car-repair" width="100">
+                <h2 class="section-heading mb-4">Contact</h2>
+            </div>
+            <div class="container">
+                <form class="text-left">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <label for="inputNama">Name</label>
+                        <input type="nama" class="form-control" id="inputnama">
+                        </div>
+                        <div class="form-group col-md-6">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" class="form-control" id="inputemail">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Description</label>
+                        <textarea type="text" class="form-control" id="inputKeterangan" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Kirim</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Your massage has been sent</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                                <div class="modal-body">
+                                    Thank you for your support, suggestions, and criticism of Chroma Garage. We will respond as soon as possible.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer class="text-center text-white py-3">
+            Copyright © 2025 Chroma Garage | All rights reserved.
+        </footer>
+    </body>
+</html>
