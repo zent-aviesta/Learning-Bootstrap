@@ -4,25 +4,41 @@ body{
     padding: 0;
 }
 
-.header-bg{
-    background-color: #1d1e24;
-}
-
 .halamanhero {
-    width: 100%;
-    position:relative;
-	text-align: center;
-	background-image: url("../img/car004.jpg");
-	background-origin: initial;
-	background-clip: initial;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 100%;
-	background-position: center;
-    z-index: 1;
     padding-top: 120px;
     padding-bottom: 100px;
 }
+
+.unitclass-card {
+    background-color: #000;
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 28%;
+    border-top-left-radius: var(--bs-border-radius);
+    border-top-right-radius: var(--bs-border-radius);
+    overflow: hidden;
+}
+.unitclass-card_cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    pointer-events: none
+}
+
+.unitclass-card_header {
+    display: flex;
+    align-items: end;
+    gap: 6px;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    padding: 0 20px
+}
+
 .servicetitle{
     padding-bottom: 30px;
 }
@@ -69,3 +85,4 @@ footer{
     border-radius: 15px;
     border-color: white;
 }
+
