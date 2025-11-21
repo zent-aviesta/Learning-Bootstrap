@@ -383,77 +383,89 @@
             });
         </script>
         <script>
-        const xValues = [
-            "Airbus A320neo",
-            "Airbus A330-900",
-            "Airbus A380",
-            "MiG-35",
-            "Su-57",
-            "F-22 Raptor",
-            "AH-64 Apache",
-            "Mi-28",
-            "Eurocopter Tiger"
-        ];
+            const xValues = [
+                "Airbus A320neo",
+                "Airbus A330-900",
+                "Airbus A380",
+                "MiG-35",
+                "Su-57",
+                "F-22 Raptor",
+                "AH-64 Apache",
+                "Mi-28",
+                "Eurocopter Tiger"
+            ];
 
-        const yValues = [75, 60, 45, 50, 55, 48, 40, 35, 30];
+            const yValues = [75, 60, 45, 50, 55, 48, 40, 35, 30];
 
-        (function(){
-            const min = Math.min(...yValues);
-            const max = Math.max(...yValues);
-            window.barColors = yValues.map(v => {
-                const t = (v - min) / (max - min || 1);
-                const gray = Math.round(255 * (1 - t));
-                return `rgba(${gray}, ${gray}, ${gray}, 0.9)`;
-            });
-        })();
+            (function(){
+                const min = Math.min(...yValues);
+                const max = Math.max(...yValues);
+                window.barColors = yValues.map(v => {
+                    const t = (v - min) / (max - min || 1);
+                    const gray = Math.round(255 * (1 - t));
+                    return `rgba(${gray}, ${gray}, ${gray}, 0.9)`;
+                });
+            })();
 
-        const ctx = document.getElementById('myChart').getContext('2d');
+            const ctx = document.getElementById('myChart').getContext('2d');
 
-        new Chart(ctx, {
-            type: "bar",
-            data: {
-                labels: xValues,
-                datasets: [{
-                    label: "Units",
-                    data: yValues,
-                    backgroundColor: window.barColors,
-                    borderColor: 'rgba(0,0,0,1)', /* black border for all bars */
-                    borderWidth: 1.5,       // thin border for better visibility
-                    borderRadius: 12,
-                    barThickness: 28,
-                    hoverBorderWidth: 2
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                layout: {
-                    padding: 20
+            new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        label: "Units",
+                        data: yValues,
+                        backgroundColor: window.barColors,
+                        borderColor: 'rgba(0,0,0,1)',
+                        borderWidth: 1.5,
+                        borderRadius: 12,
+                        barThickness: 28,
+                        hoverBorderWidth: 2
+                    }]
                 },
-                plugins: {
-                    legend: { display: false },
-                    title: {
-                        display: true,
-                        text: "Units Produced",
-                        font: { size: 16 },
-                        color: "black"
-                    }
-                },
-                scales: {
-                    x: {
-                        title: { display: true, text: "Aircraft (name)", color: "#black", font: {size:12} },
-                        ticks: { color: "black" },
-                        grid: { display: false }
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    layout: {
+                        padding: 20
                     },
-                    y: {
-                        beginAtZero: true,
-                        title: { display: true, text: "Units", color: "#black", font: {size:12} },
-                        ticks: { color: "black" },
-                        grid: { color: "rgba(255,255,255,0.06)" }
+                    plugins: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: "Units Produced",
+                            font: { size: 16 },
+                            color: "black"
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: { display: true, text: "Aircraft (name)", color: "#black", font: {size:12} },
+                            ticks: { color: "black" },
+                            grid: { display: false }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            title: { display: true, text: "Units", color: "#black", font: {size:12} },
+                            ticks: { color: "black" },
+                            grid: { color: "rgba(255,255,255,0.06)" }
+                        }
                     }
                 }
-            }
-        });
+            });
+        </script>
+        <div class="loader-wrapper">
+            <span class="loader">
+                <span class="loader-inner"></span>
+            </span>
+        </div>
+        <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+            // fallback: ensure loader removed after 10s
+            setTimeout(function(){ $(".loader-wrapper").fadeOut("slow"); });
         </script>
     </body>
 </html>
