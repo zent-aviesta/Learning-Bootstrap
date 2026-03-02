@@ -1,0 +1,273 @@
+body{
+    background-color: #1d1e24;
+    margin: 0;
+    padding: 0;
+}
+
+.judul{
+    font-size: 6vw;
+}
+
+.titledesc{
+    font-size: 3vw;
+}
+
+.description{
+    font-size: 2.5vw;
+}
+
+.heroopacity{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.servicetitle{
+    padding-bottom: 30px;
+}
+.halamanservis{
+    padding: 50px;
+}
+
+.containercol{
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 15px;
+}
+
+.halamanstat{
+    position: relative;
+    padding: 50px;
+    overflow: hidden;
+    color: white;
+    z-index: 1;
+}
+
+.halamanstat-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.halamanstat > .abouttitle,
+.halamanstat > .container{
+    position: relative;
+    z-index: 1;
+}
+
+.halamanstat::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 0;
+}
+
+.constat{
+    padding-top: 50px;
+}
+
+.aboutimg{
+    background-color: white;
+    padding:10px;
+    border-radius: 1vw;
+}
+
+.contactimg{
+    background-color: white;
+    padding:10px;
+    border-radius: 50%;
+}
+
+.halamanabout{
+    position: relative;
+    padding: 50px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.halamancontact{
+    padding: 50px;
+}
+
+footer{
+    background-color: #1d1e24;
+}
+
+.sectiontitle{
+    font-size: 5vw;
+}
+
+.card{
+    padding: min(2em, 5%);
+    background-color: rgba(0, 0, 0,0.1);
+    border-width: 5px;
+    border-radius: 15px;
+    border-color: white;
+}
+
+.map-responsive{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.halamanabout .social-icons{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.chart-container{
+    background-color: rgba(255,255,255,0.7);
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-radius: 50px;
+}
+
+.halamanabout .social-icons a{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.04);
+    transition: transform .12s ease, background .12s ease;
+    text-decoration: none;
+    padding: 0;
+}
+
+.halamanabout .social-icons a:hover{
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.08);
+}
+
+.halamanabout .social-icons img{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    transition: transform 180ms cubic-bezier(.2,.8,.2,1), color 180ms;
+    /* avoid persistent will-change (can cause rendering artifacts) */
+    will-change: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus-visible {
+    /* no scale (scale often blurs text). use a 3D translate to keep rendering crisp */
+    transform: translate3d(0, -4px, 0);
+    color: black;
+    outline: none;
+}
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg,black,grey);
+    border-radius: 2px;
+    transition: transform 180ms cubic-bezier(.2,.8,.2,1);
+    pointer-events: none;
+}
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus-visible::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.loader-wrapper{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    border: 4px solid #fff;
+    animation: loader 2s infinite linear;
+}
+
+.loader-inner{
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(180deg);}
+    50% {transform: rotate(180deg);}
+    75% {transform: rotate(360deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes loader-inner {
+    0% {height: 0%;}
+    25% {height: 0%;}
+    50% {height: 100%;}
+    75% {height: 100%;}
+    100% {height: 0%;}
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar-nav .nav-link,
+    .navbar-nav .nav-link::after {
+        transition: none !important;
+        transform: none !important;
+    }
+}
+
+@media (max-width: 480px){
+    .halamanabout .social-icons a{ width: 36px; height: 36px; }
+    .halamanabout .social-icons img{ width: 18px; height: 18px; }
+}
+
+#myChart{
+    background-color: rgba(255,255,255,0.06);
+    border-radius: 12px;   
+    padding: 20px;         
+    box-sizing: border-box;
+    max-width: 100%;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
