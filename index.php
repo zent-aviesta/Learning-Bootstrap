@@ -285,13 +285,13 @@
                 }
             }
 
-            // Logika Timer Real-time (sesuai permintaan Anda)
+            // Logika Timer Real-time
             function startRealtimeUpdate() {
                 fetchData(); // Ambil data awal
                 timer = setInterval(() => {
                     elapsed++;
-                    // Contoh: Update data setiap 5 detik
-                    if (elapsed % 5 === 0) {
+                    // Contoh: Update data setiap 2 detik
+                    if (elapsed % 2 === 0) {
                         fetchData();
                     }
                     // Jika ada elemen #timer-display, update teksnya
@@ -345,4 +345,5 @@
             });
         </script>
     </body>
+
 </html>
