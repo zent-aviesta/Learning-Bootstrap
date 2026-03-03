@@ -111,7 +111,7 @@
                                     <li class="mb-2">
                                     <a class="d-flex align-items-center" href="https://reddit.com/user/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Reddit">
                                         <img src="assets/svg/Reddit_Logo_Icon.svg" alt="Reddit">
-                                        <span class="media-name">SHYVISION</span>
+                                        <span class="media-name">SKYVISION</span>
                                     </a>
                                     </li>
                                     <li class="mb-2">
@@ -347,3 +347,4 @@
     </body>
 
 </html>
+
